@@ -552,7 +552,7 @@ footer {
 }
 
 .heart:nth-child(10) {
-  left: 95%;
+  left: 90%;
   animation-duration: 9s;
   animation-delay: 3s;
 }
