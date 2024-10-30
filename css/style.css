@@ -442,3 +442,117 @@ footer {
     opacity: 1;
   }
 }
+
+.wrap {
+  position: relative;
+  text-align: center;
+}
+
+.hearts {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.heart {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff9999;
+  transform: rotate(-45deg);
+  opacity: 0;
+  animation: fall linear infinite;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #ff9999;
+  border-radius: 50%;
+}
+
+.heart::before {
+  top: -10px;
+  left: 0;
+}
+
+.heart::after {
+  top: 0;
+  left: 10px;
+}
+
+/* Hiệu ứng rơi */
+@keyframes fall {
+  0% {
+      transform: translateY(-100px) rotate(-45deg);
+      opacity: 1;
+  }
+  100% {
+      transform: translateY(100vh) rotate(45deg);
+      opacity: 0;
+  }
+}
+
+/* Tạo trái tim rơi ngẫu nhiên và chậm hơn */
+.heart:nth-child(1) {
+  left: 5%;
+  animation-duration: 6s;
+  animation-delay: 0s;
+}
+
+.heart:nth-child(2) {
+  left: 15%;
+  animation-duration: 7s;
+  animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+  left: 25%;
+  animation-duration: 8s;
+  animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+  left: 35%;
+  animation-duration: 5s;
+  animation-delay: 1s;
+}
+
+.heart:nth-child(5) {
+  left: 45%;
+  animation-duration: 6.5s;
+  animation-delay: 3s;
+}
+
+.heart:nth-child(6) {
+  left: 55%;
+  animation-duration: 7.5s;
+  animation-delay: 5s;
+}
+
+.heart:nth-child(7) {
+  left: 65%;
+  animation-duration: 8.5s;
+  animation-delay: 2s;
+}
+
+.heart:nth-child(8) {
+  left: 75%;
+  animation-duration: 6s;
+  animation-delay: 4s;
+}
+
+.heart:nth-child(9) {
+  left: 85%;
+  animation-duration: 7.5s;
+  animation-delay: 1s;
+}
+
+.heart:nth-child(10) {
+  left: 95%;
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
